@@ -56,6 +56,8 @@ class LibraryBorrowManager:
                 self.borrow_days = int(input("Nhập số ngày đã mượn:"))
                 self.late_days = int(input("Nhập số ngày trễ hạn:"))
                 self.fine_per_day = int(input("Nhập tiền phạt mỗi ngày:"))
+                book.calculate_fine()
+                book.classify_fine()
                 print("Cập nhật thành công")
                 found = True
                 break
